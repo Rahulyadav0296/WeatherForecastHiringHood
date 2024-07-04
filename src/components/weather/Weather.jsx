@@ -21,13 +21,8 @@ function Weather() {
     }
 
     try {
-      console.log("Fetching weather data for location: ", location);
-      console.log("API Key: ", import.meta.env.VITE_API_KEY);
-
       const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${
-          import.meta.env.VITE_API_KEY
-        }&q=${location}&days=10&aqi=yes&alerts=yes`
+        `http://api.weatherapi.com/v1/forecast.json?key=bf7943c111424f4694f141052242806&q=${location}&days=10&aqi=yes&alerts=yes`
       );
 
       if (!response.ok) {

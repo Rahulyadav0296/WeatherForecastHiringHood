@@ -21,9 +21,7 @@ function EventCalander() {
 
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/future.json?key=${
-          import.meta.env.VITE_API_KEY
-        }&q=${location}&dt=${formattedDate}`
+        `http://api.weatherapi.com/v1/future.json?key=bf7943c111424f4694f141052242806&q=${location}&dt=${formattedDate}`
       );
       if (!response.ok) {
         throw new Error("The response is not ok!");
