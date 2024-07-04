@@ -1,0 +1,159 @@
+/* Container for the day weather with a fixed header */
+.day-weather-container {
+  display: flex;
+  flex-direction: column;
+  background: #0d2840; /* Matching the overall background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%;
+  /* max-width: 600px; */
+  height: 105vh;
+  color: #fff;
+  overflow: hidden; /* Hide scrollbars in container */
+  position: relative; /* To position children absolutely if needed */
+}
+
+/* Fixed header within the day weather container */
+.day-weather-container h2 {
+  position: sticky;
+  top: 0; /* Stick to the top of the container */
+  background: #0d2840; /* Same background as the container to blend in */
+  z-index: 10; /* Ensure it sits above other content */
+  margin: 0; /* Remove default margin */
+  padding: 10px 0; /* Padding for some space around the text */
+  text-align: center; /* Center the text */
+}
+
+/* Scrollable area for the forecast details */
+.day-forecast {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px 0; /* Padding to create space above and below items */
+  gap: 10px; /* Space between forecast items */
+}
+
+/* Each day forecast item */
+.day-forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px; /* Fixed width for each forecast item */
+  min-width: 200px; /* Ensuring the same minimum width */
+  color: #fff;
+}
+
+/* Weather icon for each day forecast */
+.day-forecast-item .weather-icon {
+  width: 50px;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Time and condition styles */
+.day-forecast-item .temp-c,
+.day-forecast-item .daily_will_it_rain .day-forecast-item .wind {
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+
+/* Scrollbar styling for the forecast container */
+.day-forecast::-webkit-scrollbar {
+  height: 8px;
+}
+
+.day-forecast::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.crops-button,
+.travel-button {
+  background-color: #1e8cbe;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.crops-button:hover,
+.travel-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Container adjustments for smaller screens */
+  .day-weather-container {
+    padding: 10px;
+    height: auto; /* Let the height be auto to fit content */
+  }
+
+  .day-weather-container h2 {
+    font-size: 1.2em; /* Adjust the font size for the header */
+    padding: 5px 0; /* Reduce padding */
+  }
+
+  /* Adjust forecast items to fit within the screen width */
+  .day-forecast {
+    flex-direction: column; /* Stack items vertically */
+    overflow-x: visible; /* Disable horizontal scrolling */
+    padding: 0; /* Remove padding */
+    gap: 20px; /* Increase gap between items */
+  }
+
+  /* Make each forecast item take the full width */
+  .day-forecast-item {
+    width: 100%; /* Full width */
+    min-width: 100%; /* Ensure it fits the container */
+    padding: 15px; /* Add some padding */
+  }
+
+  /* Resize the weather icon */
+  .day-forecast-item .weather-icon {
+    width: 40px; /* Smaller icon size */
+    margin: 5px 0; /* Adjust margin */
+  }
+
+  /* Adjust button size and spacing */
+  .crops-button,
+  .travel-button {
+    padding: 8px 10px; /* Smaller padding */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin-top: 5px; /* Reduce top margin */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .day-weather-container {
+    padding: 5px;
+  }
+
+  .day-weather-container h2 {
+    font-size: 1em; /* Smaller header font size */
+    padding: 5px 0; /* Adjust padding */
+  }
+
+  .day-forecast-item {
+    padding: 10px; /* Smaller padding */
+  }
+
+  .day-forecast-item .weather-icon {
+    width: 30px; /* Smaller icon size */
+  }
+
+  .crops-button,
+  .travel-button {
+    padding: 5px 8px; /* Smaller padding */
+    font-size: 0.8em; /* Smaller font size */
+  }
+}

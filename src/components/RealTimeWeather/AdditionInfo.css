@@ -1,0 +1,41 @@
+/* Additional weather info */
+.additional-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  background: #173f63;
+}
+
+.additional-info-one,
+.additional-info-two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.additional-info p {
+  margin: 5px 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .additional-info {
+    font-size: 0.8em; /* Smaller font size */
+    padding: 10px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .additional-info {
+    font-size: 0.7em; /* Smaller font size */
+    padding: 5px; /* Reduced padding */
+  }
+}

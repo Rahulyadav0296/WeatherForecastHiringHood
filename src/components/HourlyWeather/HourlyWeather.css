@@ -1,0 +1,159 @@
+/* Container for the hourly weather with a fixed header */
+.hourly-weather-container {
+  display: flex;
+  flex-direction: column;
+  background: #0d2840; /* Matching the overall background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%;
+  /* max-width: 600px; */
+  height: 55vh;
+  color: #fff;
+  overflow: hidden; /* Hide scrollbars in container */
+  position: relative; /* To position children absolutely if needed */
+}
+
+/* Fixed header within the hourly weather container */
+.hourly-weather-container h2 {
+  position: sticky;
+  top: 0; /* Stick to the top of the container */
+  background: #0d2840; /* Same background as the container to blend in */
+  z-index: 10; /* Ensure it sits above other content */
+  margin: 0; /* Remove default margin */
+  padding: 10px 0; /* Padding for some space around the text */
+  text-align: center; /* Center the text */
+}
+
+/* Scrollable area for the forecast details */
+.hourly-forecast {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px 0; /* Padding to create space above and below items */
+  gap: 10px; /* Space between forecast items */
+}
+
+.hourforecastbutton {
+  background: #1e8cbe;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Smoother transition */
+  width: 100%; /* Make the button full width */
+  box-sizing: border-box; /* Include padding in the button width */
+}
+
+/* Each hourly forecast item */
+.hourly-forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px; /* Fixed width for each forecast item */
+  min-width: 200px; /* Ensuring the same minimum width */
+  color: #fff;
+}
+
+/* Weather icon for each hourly forecast */
+.hourly-forecast-item .weather-icon {
+  width: 50px;
+  height: auto;
+  margin: 5px 0;
+}
+
+/* Time and condition styles */
+.hourly-forecast-item .time,
+.hourly-forecast-item .condition,
+.hourly-forecast-item .wind {
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+
+/* Scrollbar styling for the forecast container */
+.hourly-forecast::-webkit-scrollbar {
+  height: 8px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Container adjustments for smaller screens */
+  .hourly-weather-container {
+    padding: 10px;
+    height: auto; /* Adjust height for content fitting */
+  }
+
+  .hourly-weather-container h2 {
+    font-size: 1.2em; /* Adjust the font size for the header */
+    padding: 5px 0; /* Reduce padding */
+  }
+
+  /* Adjust forecast items to fit within the screen width */
+  .hourly-forecast {
+    margin: 5px;
+    flex-direction: column; /* Stack items vertically */
+    overflow-x: visible; /* Disable horizontal scrolling */
+    padding: 0; /* Remove padding */
+    gap: 20px; /* Increase gap between items */
+  }
+
+  /* Make each forecast item take the full width */
+  .hourly-forecast-item {
+    width: 100%; /* Full width */
+    min-width: 100%; /* Ensure it fits the container */
+    padding: 15px; /* Add some padding */
+  }
+
+  /* Resize the weather icon */
+  .hourly-forecast-item .weather-icon {
+    width: 40px; /* Smaller icon size */
+    margin: 5px 0; /* Adjust margin */
+  }
+
+  /* Adjust time and condition text */
+  .hourly-forecast-item .time,
+  .hourly-forecast-item .condition,
+  .hourly-forecast-item .wind {
+    font-size: 0.8em; /* Smaller font size */
+    margin: 2px 0; /* Adjust margin */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .hourly-weather-container {
+    padding: 5px;
+  }
+
+  .hourly-weather-container h2 {
+    font-size: 1em; /* Smaller header font size */
+    padding: 5px 0; /* Adjust padding */
+  }
+
+  .hourly-forecast-item {
+    padding: 10px; /* Smaller padding */
+  }
+
+  .hourly-forecast-item .weather-icon {
+    width: 30px; /* Smaller icon size */
+  }
+
+  .hourly-forecast-item .time,
+  .hourly-forecast-item .condition,
+  .hourly-forecast-item .wind {
+    font-size: 0.7em; /* Smaller font size */
+  }
+}

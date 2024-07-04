@@ -1,0 +1,129 @@
+/* Current weather summary styles */
+.current-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Temperature details box */
+.temperature-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Smaller weather icon */
+.weather-icon {
+  width: 100px; /* Adjusted size */
+  height: auto;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Temperature text */
+.temperature {
+  font-size: 2.5em;
+  color: white;
+}
+
+/* Temperature value */
+.temperature-value {
+  font-size: 3em;
+  margin: 0;
+}
+
+/* Temperature unit text */
+.temperature-celce,
+.temperature-unit-temp {
+  font-size: 0.8em;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Active Celsius temperature unit */
+.temperature-celce.active {
+  color: #1e8cbe; /* Active color */
+  cursor: default; /* Prevent cursor change on active state */
+}
+
+/* Active Fahrenheit temperature unit */
+.temperature-unit-temp.active {
+  color: #1e8cbe; /* Active color */
+  cursor: default; /* Prevent cursor change on active state */
+}
+
+/* Weather condition text */
+.weather-condition {
+  font-size: 1.2em;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .current-summary,
+  .temperature-details {
+    width: 100%; /* Full width for better use of space */
+  }
+
+  .temperature-details {
+    padding: 15px; /* Reduced padding */
+  }
+
+  .weather-icon {
+    width: 80px; /* Smaller icon size */
+  }
+
+  .temperature {
+    font-size: 2em; /* Reduced font size */
+  }
+
+  .temperature-value {
+    font-size: 2.5em; /* Reduced font size */
+  }
+
+  .temperature-celce,
+  .temperature-unit-temp {
+    font-size: 0.7em; /* Smaller font size */
+  }
+
+  .weather-condition {
+    font-size: 1em; /* Smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature-details {
+    padding: 10px; /* Further reduced padding */
+  }
+  .weather-icon {
+    width: 60px; /* Smaller icon size */
+  }
+
+  .temperature {
+    font-size: 1.5em; /* Smaller font size */
+  }
+
+  .temperature-value {
+    font-size: 2em; /* Smaller font size */
+  }
+
+  .temperature-celce,
+  .temperature-unit-temp {
+    font-size: 0.6em; /* Smaller font size */
+  }
+
+  .weather-condition {
+    font-size: 0.8em; /* Smaller font size */
+  }
+}

@@ -1,0 +1,14 @@
+.crop-advisory {
+  margin: 10px 0px;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgb(18, 72, 122);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.advisory {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}

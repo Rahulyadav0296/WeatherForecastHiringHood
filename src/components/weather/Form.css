@@ -1,0 +1,102 @@
+/* Style the form container */
+.form {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #0d2942; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.logo {
+  width: 55px; /* Adjust width as needed */
+  border-radius: 50%;
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px; /* Optional: Add margin for spacing */
+  display: block; /* Ensure the image behaves as a block element */
+}
+
+/* Style the input field */
+.search-input {
+  flex: 1; /* Allow the input to grow and take available space */
+  max-width: 300px; /* Maximum width for the input */
+  padding: 10px;
+  margin-right: 10px; /* Space between input and button */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+
+/* Change border color on focus */
+.search-input:focus {
+  border-color: #020202; /* Dark border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff; /* White text */
+  background-color: #1e8cbe; /* Dark background */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Change background color on hover */
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Media Queries for Screens Between 768px and 1200px */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .weather-details,
+  .form {
+    flex-direction: row; /* Keep items in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping to a new line */
+    width: auto; /* Allow width to adjust automatically */
+  }
+
+  .weather-forecastDetails {
+    width: auto;
+    flex: 1 0 auto;
+  }
+
+  .search-input {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    margin-right: 10px;
+  }
+
+  button[type="submit"] {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
+
+/* Media Queries for Screens Less Than 768px */
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-input {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+    max-width: 100%; /* Full width */
+  }
+
+  button[type="submit"] {
+    width: 100%; /* Full width */
+  }
+}

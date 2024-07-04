@@ -1,0 +1,122 @@
+/* Main container for weather details */
+.weather-containerOne {
+  padding: 20px;
+  width: 100%; /* Increase width for larger layout */
+  max-width: 1200px; /* Ensure it doesn't stretch too wide */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Flex layout for weather details */
+.weather-details {
+  display: flex;
+  width: 100%;
+  gap: 20px; /* Gap between the items */
+  justify-content: space-between; /* Space out items */
+}
+
+/* Align RealTimeWeather and HourlyWeather side by side */
+.weather-forecastDetails {
+  display: flex;
+  flex-direction: column; /* Stack HourlyWeather and TenDayForecast vertically */
+  width: 60%; /* Take half width */
+  gap: 20px; /* Gap between HourlyWeather and TenDayForecast */
+}
+
+/* RealTimeWeather takes more space */
+.weather-details > .RealTimeWeather {
+  flex-grow: 2; /* Allow RealTimeWeather to take more space */
+  max-width: 60%; /* Limit the max width */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.front-view {
+  min-height: 70vh; /* No quotes around values in CSS */
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  color: white; /* Ensure the text is visible on a black background */
+  text-align: center; /* Center the text inside the div */
+}
+
+h1 {
+  color: hsl(207, 75%, 19%);
+  font-size: 50px !important;
+  font-weight: bold !important;
+  font-family: monospace;
+  letter-spacing: 7px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+h1 {
+  padding: 64px;
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 30%) 0,
+    hsl(0, 0%, 100%) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
+/* Media Queries for Screens Between 768px and 1200px */
+@media (max-width: 1200px) and (min-width: 768px) {
+  body {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+  }
+
+  .weather-containerOne {
+    flex-direction: row; /* Align items in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100vw; /* Allow full viewport width */
+    max-width: none; /* Remove max-width restriction */
+    gap: 20px;
+  }
+}
+
+/* Media Queries for Screens Less Than 768px */
+@media (max-width: 768px) {
+  .weather-containerOne {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    padding: 10px;
+  }
+
+  .weather-details {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    width: 100%;
+  }
+
+  .weather-forecastDetails {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    align-items: center;
+  }
+
+  .weather-details > .RealTimeWeather {
+    max-width: 100%; /* Full width */
+  }
+}

@@ -1,0 +1,75 @@
+/* Air quality section */
+.air-quality {
+  background: #173f63;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Air quality title */
+.air-quality h3 {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Flex container for air quality details */
+.air-quality-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual air quality columns */
+.air-quality-one,
+.air-quality-two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+/* Air quality text */
+.air-quality p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .air-quality {
+    padding: 15px; /* Reduced padding */
+  }
+
+  .air-quality h3 {
+    font-size: 1.3em; /* Smaller font size */
+  }
+
+  .air-quality-detail {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 10px; /* Reduced gap */
+  }
+
+  .air-quality-one,
+  .air-quality-two {
+    width: 100%; /* Full width for each column */
+    align-items: center; /* Center the items */
+  }
+}
+
+@media (max-width: 480px) {
+  .air-quality {
+    padding: 10px; /* Smaller padding */
+  }
+
+  .air-quality h3 {
+    font-size: 1.1em; /* Smaller font size */
+  }
+
+  .air-quality-detail {
+    gap: 5px; /* Further reduced gap */
+  }
+}

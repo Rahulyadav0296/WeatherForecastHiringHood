@@ -1,0 +1,178 @@
+/* General styling for the container */
+.event-calendar-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  background-color: #0d2840;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the title */
+h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styling for the error message */
+.error-message {
+  color: #ff0800;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Styling for the calendar */
+.react-calendar {
+  border: none;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333333;
+  background: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.react-calendar__tile--active {
+  background-color: #0d2942;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+.react-calendar__tile--now {
+  background-color: #ffc107;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.react-calendar__navigation button {
+  color: #0d2942;
+  min-width: 44px;
+  background: none;
+  font-size: 1.2rem;
+  margin: 2px;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.react-calendar__navigation button:hover,
+.react-calendar__navigation button:focus {
+  background-color: #e0e0e0;
+  color: #0056b3;
+  border-radius: 6px;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d9534f;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  font-weight: bold;
+  color: #333333;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 20px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.react-calendar__navigation__label {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.weather-details-events {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto; /* Align the container to the left side */
+  margin-right: auto; /* Center align the container on larger screens */
+}
+
+/* Heading styling for weather details */
+.weather-details-events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* General styling for text */
+.weather-details-events p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Highlighting temperature with bold text */
+.weather-details-events p:last-child {
+  font-weight: bold;
+}
+
+/* Styling for the condition icon */
+.weather-details-events img {
+  display: block;
+  margin: 10px auto; /* Center the image horizontally */
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  height: auto;
+}
+
+/* Ensure the overall layout is responsive */
+@media (max-width: 600px) {
+  .weather-details-events {
+    padding: 15px;
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  .weather-details-events h2 {
+    font-size: 1.25rem;
+  }
+
+  .weather-details-events p {
+    font-size: 0.9rem;
+  }
+
+  .weather-details-events img {
+    width: 40px;
+    height: 40px;
+  }
+}
