@@ -43,8 +43,8 @@
   background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
   border-radius: 8px;
   padding: 10px;
-  width: 200px; /* Fixed width for each forecast item */
-  min-width: 200px; /* Ensuring the same minimum width */
+  width: 300px; /* Fixed width for each forecast item */
+  min-width: 300px; /* Ensuring the same minimum width */
   color: #fff;
 }
 
